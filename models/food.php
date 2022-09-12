@@ -11,7 +11,7 @@ class food extends product
     {
         parent::__construct($name, $price, $brand);
         $this->setIngredients($ingredients);
-        $this->setWeight($price);
+        $this->setWeight($weight);
     }
 
     public function getIngredients()
@@ -30,7 +30,7 @@ class food extends product
         return 'n.d.';
     }
 
-    public function setWeight($price)
+    public function setWeight($weight)
     {
         if(!is_numeric($weight) || $weight < 0) return;
         $this->weight = $weight;
