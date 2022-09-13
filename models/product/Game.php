@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__ . '/product.php';
+require_once __DIR__ . '/Product.php';
 
-class game extends product
+class Game extends Product
 {
-    public $color;
+    private $color;
 
     public function __construct($name, $price, $brand, $color)
     {

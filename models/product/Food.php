@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__ . '/product.php';
+require_once __DIR__ . '/Product.php';
 
-class food extends product
+class Food extends Product
 {
-    public $ingredients;
-    public $weight;
+    private $ingredients;
+    private $weight;
 
     public function __construct($name, $price, $brand, $ingredients, $weight)
     {

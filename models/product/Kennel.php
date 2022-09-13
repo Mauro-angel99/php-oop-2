@@ -1,12 +1,12 @@
 <?php
 
-require_once __DIR__ . '/product.php';
+require_once __DIR__ . '/Product.php';
 
-class cage extends product
+class Kennel extends Product
 {
-    public $height;
-    public $length;
-    public $width;
+    private $height;
+    private $length;
+    private $width;
 
 
     public function __construct($name, $price, $brand, $height, $length, $width)

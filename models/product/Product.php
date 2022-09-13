@@ -1,17 +1,29 @@
 <?php
 
-class product
+class Product
 {
-    public $name;
-    public $price;
-    public $brand;
+    protected $id;
+    protected $name;
+    protected $price;
+    protected $brand;
 
 
     public function __construct($name, $price, $brand)
     {
+        $this->setId();
         $this->setName($name);
         $this->setPrice($price);
         $this->setBrand($brand);
+    }
+
+    public function getId()
+    {
+        $this->id = $id;
+    }
+
+    public function setId()
+    {
+        $this->id = uniqid();
     }
 
     public function getName()
@@ -25,10 +37,9 @@ class product
     }
 
 
-    public function getPrice($currency = '€')
+    public function getPrice()
     {
-        if($this->price) return $currency . $this->price;
-        return 'n.d.';
+        $this->price = $price;
     }
 
     public function setPrice($price)
